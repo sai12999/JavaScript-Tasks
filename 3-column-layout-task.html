@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title>3-column-layout-task</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/body-styles.css">
+        <link rel="stylesheet" type="text/css" href="css/header-styles.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <script type = "text/javascript" src = "js/3-column-layout-task.js" ></script>
+    </head>
+    <body>
+        <header>
+            <!--Text used as a logo to the page-->
+            <div class="logo">
+                GAME
+            </div>
+            <nav>
+                <a class="active" href="3-column-layout-task.html">Home</a>
+            </nav>
+        </header>
+
+        <!--Three column layout body-->
+        <div class="row">
+            <div id="column1" class="column">
+                <label>Player1 Score:</label>
+                <input type="text" id="p1score" disabled/>
+                <button id="p1play" onclick="giveScore(this.id)">PLAY</button>
+            </div>
+            <div id="column2" class="column">
+                <label>Player2 Score:</label>
+                <input type="text" id="p2score" disabled/>
+                <button id="p2play" onclick="giveScore(this.id)">PLAY</button>
+            </div>
+            <div id="column3" class="column">
+                    <label>Dice Value:</label>
+                    <input type="text" id="result" disabled/>
+            </div>
+        </div>
+        <div id="final_result">
+            
+        </div>
+        <div style="text-align:center;">
+            <button id="start_again" onclick="resetStorage()">Start Again!</button>
+        </div>
+        <article>
+            <h1>GAME RULES</h1>
+            <ol>
+                <li>Click on play button to roll the dice.</li>
+                <li>Dice will give a number between 1-6.</li>
+                <li>Both the players will be given 5 chances to roll the dice.</li>
+                <li>The result will be obtained after usage of 5 chances by both the players.</li>
+                <li>Player with maximum score after 5 chances will be declared as winner.If the points tie then result is a draw.</li>
+                <li>Players can click start again button to start the game from the beggining at any time.</li>
+            </ol>
+        </article>
+        <footer>
+            <p class="footer">Gamers Den,<br/>I know you love PUBG but please try my game too!</p>
+        </footer>
+    </body>
+</html>

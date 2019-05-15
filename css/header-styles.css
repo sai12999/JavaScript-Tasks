@@ -1,0 +1,47 @@
+header{
+    background-color:#263852;
+    padding: 0.1em 1.5em;
+}
+
+header > nav{
+    float : right;
+}
+
+header a,.logo{
+    float: left;
+    color: white;
+    text-align: center;
+    margin : 0.25em;
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+    font-size: 1.125em; 
+    line-height: 1.5625em;
+    border-radius: 0.25em;
+}
+
+.logo{
+    font-weight : bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header a.active {
+    background-color: white;
+    color: black;
+}
+
+header a:hover{
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width: 538px) {
+    .header a,logo {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+    .header-right,logo {
+      float: none;
+    }
+  }
