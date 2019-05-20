@@ -1,8 +1,10 @@
 var winnerIsSet=0;
-var p1=0,p2=0,b1count=0,b2count;
+//p1 represents player 1 and p2 represents player 2.
+var player1Score=0,player2Score=0,b1count=0,b2count=0;
 function giveScore(button_id)
 {
     if(winnerIsSet==1) return;
+    //generating random number between 1 and 6
     var min=1; 
     var max=6;  
     var random =Math.floor(Math.random()*10)%7; 
@@ -26,15 +28,15 @@ function giveScore(button_id)
         }
         document.getElementById("final_result").innerText = "";
         /*player1 score update*/
-        if(p1)
+        if(player1Score)
         {
-            p1 = Number(p1) + random;
+            player1Score = Number(player1Score) + random;
         }
         else
         {
-            p1 = random;
+            player1Score = random;
         }
-        document.getElementById("p1score").value=p1;
+        document.getElementById("p1score").value = player1Score;
     }
     else if(button_id=="p2play")
     {
@@ -56,22 +58,22 @@ function giveScore(button_id)
         }
         document.getElementById("final_result").innerText = "";
         /*player2 score update*/
-        if(p2)
+        if(player2Score)
         {
-            p2 = Number(p2) + random;
+            player2Score = Number(player2Score) + random;
         }
         else
         {
-            p2 = random;
+            player2Score = random;
         }
-        document.getElementById("p2score").value=p2;
+        document.getElementById("p2score").value=player2Score;
     }
     document.getElementById("result").value=random;
     if(b1count>=5 && b2count>=5)
     {
-        var winner = p1>p2?"Player1":"Player2";
+        var winner = player1Score>player2Score?"Player1":"Player2";
         winnerIsSet=1;
-        if(p1==p2)
+        if(player1Score==player2Score)
         document.getElementById("final_result").innerText = "Draw Match";
         else
         document.getElementById("final_result").innerText = winner+" won the game.";
@@ -81,10 +83,12 @@ function giveScore(button_id)
 //function resetting the local storage and scores.
 function resetStorage()
 {
-    p1=0;p2=0;b1count=0;b2count=0;
+    player1Score=0;player2Score=0;b1count=0;b2count=0;
     document.getElementById("p1score").value="";
     document.getElementById("p2score").value="";
     document.getElementById("result").value="";
     document.getElementById("final_result").innerText ="";
     winnerIsSet=0;
 }
+
+
