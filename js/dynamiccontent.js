@@ -61,3 +61,6 @@ createTag("li",null,"ol",`The result will be obtained after usage of 5 chances b
 createTag("li",null,"ol",`Player with maximum score after 5 chances will be declared as winner.If the points tie then result is a draw.`);
 createTag("li",null,"ol",`Players can click start again button to start the game from the beggining at any time.`);
 createTag("li",null,"ol",`Players can roll the dice in any order, but will have only 5 chances`);
+createTag("footer",{"id":"footer"},"body",null);
+createTag("p",{"class":"footer","id":"footerPara"},"footer",`Gamers Den,
+                                        I know you love PUBG but please try my game too!`);
